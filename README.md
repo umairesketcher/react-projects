@@ -21,7 +21,7 @@ NPM Package Manager, Node, Commitizen, Postgres Database
 2. Run Migrations using `npx sequelize-cli db:migrate`
 
 ### Project Structure
-<font size="3">
+
 ```
 lula-store-platform-backend
 ┣ logs
@@ -52,5 +52,4 @@ lula-store-platform-backend
 ┣ nodemon.json
 ┗ package.json
 ```
-</font>
 
