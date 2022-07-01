@@ -38,7 +38,7 @@ lula-store-platform-backend
 ┃ ┣ migrations            # Contains Database DB Migrations.
 ┃ ┣ models                # Contains All DB models
 ┃ ┣ public
-┃ ┣ routes                # Contains all the routes and routing logic for the app.
+┃ ┣ routes                # Contains all express routes and separated by module/area of application
 ┃ ┣ scripts
 ┃ ┃ ┗ update              # Contains All scripts that populates Data in DB.
 ┃ ┣ serializer            # Format response of Reports Data.
