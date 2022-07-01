@@ -1,58 +1,56 @@
-# React Projects
+# Lula Store Platform Backend
 
-(not maintained, was just for practice earlier)
-A couple of projects to get familiar with the React framework.
+### Tools Required:
 
-![Giphy](https://media.giphy.com/media/l0HUhhAtb86vYAHkY/giphy.gif)
-![Giphy](https://media.giphy.com/media/26gN147Cy7zF1Mv7y/giphy.gif)
-![Giphy](https://media.giphy.com/media/26DNeo2xDmfj3plbW/giphy.gif)
+NPM Package Manager, Node, Commitizen, Postgres Database
 
+### Setup
 
-## Projects
-1. **todo**: Basic todo app to get started.
-2. **tictactoe**: A tic-tac-toe game uses states and props.
-3. **markdown-editor**: A real-time markdown editor SPA. [(Live Demo)](https://react-markdown-editor.firebaseapp.com)
-4. **basic-react-redux**: Basic react-redux project which handles articles in its store.
-5. **basic-redux-thunk**: Basic react-redux-thunk project which handles items from an API using thunk, uses redux for store.
-6. **book-store [WIP]**: Online book store built over react-redux and Bootstrap for UI.
-7. **trip-mate**: Manage and keep track of your trips with this simple, smooth webapp. Uses react-router, custom styling. [(Live Demo)](https://react-trip-mate.firebaseapp.com)
-8. **property-finder**: Search for and list properties. Built on React-Native, uses react-navigation.
-9. **todo-pwa**: The classic Todos Tracker as a Progressive Web App. Built using React, Redux, leveraging styled-components, PaperCSS, Service Worker tools. Data is retained using localStorage [(Live Demo)](https://paper-todo.firebaseapp.com)
-10. **gatsbyjs-markdown-blog**: GatsbyJS blog which fetches markdown blog posts, lists them and displays each post wrapped up as a static site. Based on the tutorials in the official docs, uses GraphQL, Typography.js, Remark plugin, Glamor.
-11. **reddit-clone**: react-redux-thunk project that calls the RedditAPI to fetch posts from selected subreddits. [(Live Demo)](https://github.com/ajayns/frontend-dev-talk)
+1. Clone the project using `git clone https://github.com/Lula-Inc/lula-store-platform-backend.git`
+2. Create .env file at root directory of project and Set the enviroment variables as writen in .env.example file.
+3. Setup Database with DB creadantials.
+4. goto src folder, then run the migrations with `npx sequelize-cli db:migrate`
+5. goto src/script/update folder, then run all the script using `node <Script Name>`
+6. Open the terminal at the root directory of the project and run the command `npm install` to install dependancies and required packages for the project.
+7. now run the Server using `npm start`
 
 
-## Development
+### How to make and run migration:
 
-Projects such as _create-react-app_, _nwb_ and _react-slingshot_ have been used to setup development envs.
+1. Make migration using `npx sequelize-cli migration:create --name <Migration Name>`
+2. Run Migrations using `npx sequelize-cli db:migrate`
 
-Install all the required packages/dependencies using yarn
+### Project Structure
+<font size="3">
+```
+lula-store-platform-backend
+┣ logs
+┃ ┗ server.log                                        # Contains Error and Info Logs..
+┣ src
+┃ ┣ classes						# Contains all classes that ere used in controller.
+┃ ┣ config						# Contains configration of Database, Handle bars and jwt passport
+┃ ┣ controllers					# Contains logic of Handling incoming requests and returning responses.
+┃ ┣ enums   						# Contains the enums used in the app.
+┃ ┣ globals						# Contains Constants variables.
+┃ ┣ helpers   						# Contains Helper Functions that are used in Controller to perform sub tasks.
+┃ ┣ lib							# contains JWT creation code.
+┃ ┣ middlewares					# Contains Authentications and Validation Middlewares.
+┃ ┣ migrations  					# Contains Database DB Migrations.
+┃ ┣ models  						# Contains All DB models
+┃ ┣ public  						
+┃ ┣ routes  						# Contains all the routes and routing logic for the app.
+┃ ┣ scripts
+┃ ┃ ┗ update						# Contains All scripts that populates Data in DB.
+┃ ┣ serializer  					# Format response of Reports Data.
+┃ ┣ views						# Contains email templates.
+┃ ┣ app.js
+┃ ┣ server.js
+┃ ┗sheduled-jobs.js					# Contains All Cron job.
+┣ test 						# Contains Test Scripts.
+┣ .gitignore
+┣ ecosystem.config.js
+┣ nodemon.json
+┗ package.json
+```
+</font>
 
-### `yarn`
-
-Serve the app to browser
-
-### `yarn start`
-
-
-## Tutorials/References
-
-https://reactjs.org/tutorial/tutorial.html
-
-https://egghead.io/courses/the-beginner-s-guide-to-reactjs
-
-https://www.valentinog.com/blog/react-redux-tutorial-beginners/
-
-https://medium.com/@stowball/a-dummys-guide-to-redux-and-thunk-in-react-d8904a7005d3
-
-https://www.raywenderlich.com/178012/react-native-tutorial-building-android-apps-javascript
-
-https://medium.com/@rajaraodv/step-by-step-guide-to-building-react-redux-apps-using-mocks-48ca0f47f9a
-
-https://www.gatsbyjs.org/tutorial/part-four/
-
-https://redux.js.org/advanced/example-reddit-api
-
-## Contributing
-
-Feel free to open issues and pull requests!
