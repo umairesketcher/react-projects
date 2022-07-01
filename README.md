@@ -25,28 +25,28 @@ NPM Package Manager, Node, Commitizen, Postgres Database
 ```
 lula-store-platform-backend
 ┣ logs
-┃ ┗ server.log                                        # Contains Error and Info Logs..
+┃ ┗ server.log            # Contains Error and Info Logs..
 ┣ src
-┃ ┣ classes						# Contains all classes that ere used in controller.
-┃ ┣ config						# Contains configration of Database, Handle bars and jwt passport
-┃ ┣ controllers					# Contains logic of Handling incoming requests and returning responses.
-┃ ┣ enums   						# Contains the enums used in the app.
-┃ ┣ globals						# Contains Constants variables.
-┃ ┣ helpers   						# Contains Helper Functions that are used in Controller to perform sub tasks.
-┃ ┣ lib							# contains JWT creation code.
-┃ ┣ middlewares					# Contains Authentications and Validation Middlewares.
-┃ ┣ migrations  					# Contains Database DB Migrations.
-┃ ┣ models  						# Contains All DB models
+┃ ┣ classes						    # Contains all classes that ere used in controller.
+┃ ┣ config						    # Contains configration of Database, Handle bars and jwt passport
+┃ ┣ controllers				    # Contains logic of Handling incoming requests and returning responses.
+┃ ┣ enums   					    # Contains the enums used in the app.
+┃ ┣ globals						    # Contains Constants variables.
+┃ ┣ helpers   				    # Contains Helper Functions that are used in Controller to perform sub tasks.
+┃ ┣ lib							      # contains JWT creation code.
+┃ ┣ middlewares				    # Contains Authentications and Validation Middlewares.
+┃ ┣ migrations  			    # Contains Database DB Migrations.
+┃ ┣ models  					    # Contains All DB models
 ┃ ┣ public  						
-┃ ┣ routes  						# Contains all the routes and routing logic for the app.
+┃ ┣ routes  					    # Contains all the routes and routing logic for the app.
 ┃ ┣ scripts
-┃ ┃ ┗ update						# Contains All scripts that populates Data in DB.
-┃ ┣ serializer  					# Format response of Reports Data.
-┃ ┣ views						# Contains email templates.
+┃ ┃ ┗ update					    # Contains All scripts that populates Data in DB.
+┃ ┣ serializer  			    # Format response of Reports Data.
+┃ ┣ views						      # Contains email templates.
 ┃ ┣ app.js
 ┃ ┣ server.js
-┃ ┗sheduled-jobs.js					# Contains All Cron job.
-┣ test 						# Contains Test Scripts.
+┃ ┗sheduled-jobs.js				# Contains All Cron job.
+┣ test 						        # Contains Test Scripts.
 ┣ .gitignore
 ┣ ecosystem.config.js
 ┣ nodemon.json
